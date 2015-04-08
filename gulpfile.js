@@ -21,7 +21,7 @@ var gulp = require('gulp'),
   path = require('path'),
   paths = {
     source: './src/',
-    templates: './src/.tpl/',
+    templates: './src/tpl/',
     distribution: './dist/'
   },
   AUTOPREFIXER_BROWSERS = [
