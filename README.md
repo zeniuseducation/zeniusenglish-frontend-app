@@ -1,4 +1,4 @@
-# [![zeniusEnglish](https://zeniusenglish.com/)] Frontend Kit
+# [zeniusEnglish](https://zeniusenglish.com/) Frontend Kit
 
 ## Overview
 
