@@ -1,0 +1,27 @@
+@import "partials/normalize";
+@import "partials/global";
+@import "partials/layout";
+
+nav {
+  padding: $padding;
+  background: $primary-color;
+  ul, li, a {
+    display: inline-block;
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+  ul {
+    float: right;
+    a {
+      padding: $padding;
+    }
+  }
+}
+
+#logo {
+  padding: $padding;
+  display: inline-block;
+  background: black;
+  color: white;
+}

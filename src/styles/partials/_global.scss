@@ -1,0 +1,15 @@
+$font: Ubuntu, sans-serif;
+$padding: 5px 10px;
+$primary-color: #008EFF;
+$shadow: 0 1px 1px black;
+
+
+html {
+  background: #FAFAFA;
+  font-family: $font;
+}
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: $shadow;
+}

@@ -1,0 +1,45 @@
+/* This is a grid system of 12 grids created by Wisnu Mulya.
+How to use:
+- Every col class element must be inside a row class element.
+- Use @media-query to adjust between different screen sizes; not by appending 'xs', 'sm', 'md', 'lg', 'xl' suffixes after the col class.
+- Caveat: the cols work by using relative position CSS properties, so don't forget to use clearfix. */
+
+
+
+/*****************************
+Generals
+*****************************/
+div, section, nav, header {
+  box-sizing: border-box;
+  // Clearfix
+  &:before, &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+/*****************************
+Row
+*****************************/
+.row {
+  width: 95%;
+  margin: 0 auto 5px;
+}
+
+
+
+/*****************************
+12 Grids System
+*****************************/
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    position: relative;
+    float: left;
+    width: $i/12 * 100%;
+    padding: 0 .5%;
+    margin: 0 !important;
+  }
+}
