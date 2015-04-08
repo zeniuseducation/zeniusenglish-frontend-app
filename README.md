@@ -41,7 +41,7 @@ This frontend kit is an extension of Google Inc. [Web Starter Kit](https://devel
 1. Install NPM and Nodejs:
 ```sh
 $ brew install node
-``'
+```
 
 2. Install Gulp:
 ```sh
