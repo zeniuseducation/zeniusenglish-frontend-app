@@ -1,0 +1,5 @@
+src/*.html
+dist
+bower_components
+node_modules
+.tmp
