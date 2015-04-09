@@ -1,0 +1,58 @@
+#burger {
+  float: right;
+}
+#search {
+  float: left;
+}
+header {
+  text-align: center;
+  color: white;
+  padding: $padding;
+  background: $primary-color;
+  border-bottom: 5px solid $dark-primary-color;
+  form {
+    margin-top: 10px;
+    color: black;
+    display: block;
+    padding: padding;
+    input {
+      padding: $padding;
+      border-radius: 10px;
+      width: 90%;
+    }
+  }
+  button {
+    background: grey;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 1em;
+    padding: $padding;
+  }
+  nav {
+    margin-top: 10px;
+      ul {
+        list-style: none;
+      }
+      li {
+        background: $light-primary-color;
+        box-shadow: 0 1px 3px $dark-primary-color;
+        &:first-child {
+          border-radius: 5px 5px 0 0;
+        }
+        &:last-child {
+          border-radius: 0 0 5px 5px;
+        }
+        &:hover {
+          background: $dark-primary-color;
+        }
+        a {
+          display: block;
+          padding: $padding;
+        }
+      }
+  }
+}

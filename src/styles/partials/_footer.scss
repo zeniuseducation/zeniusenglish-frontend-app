@@ -1,0 +1,21 @@
+footer {
+  background: $primary-color;
+  border-top: 5px solid $dark-primary-color;
+  color: white;
+  padding: $padding;
+  h4 {
+    padding: $padding;
+    text-decoration: underline;
+  }
+  section {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  ul, li, a {
+    display: block;
+  }
+  a {
+    padding: $padding;
+  }
+}
