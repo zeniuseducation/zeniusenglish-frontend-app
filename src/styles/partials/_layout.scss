@@ -9,7 +9,7 @@ How to use:
 /*****************************
 Generals
 *****************************/
-div, section, nav, header {
+div, section, nav, header, footer {
   box-sizing: border-box;
   // Clearfix
   &:before, &:after{

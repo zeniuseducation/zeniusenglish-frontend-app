@@ -5,9 +5,21 @@
   <title>@@title</title>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet'>
   <link rel="stylesheet" href="styles/main.css">
-  <!-- build:js scripts/main.js -->
-  <script src="scripts/main.js" async></script>
-  <!-- endbuild -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <header>
+    <a href="#"><h1>zeniusEnglish</h1></a>
+    <button id="burger">B</button>
+    <button id="search">S</button>
+    <nav style="display: none">
+      <ul>
+        <li><a href="#">Cara Belajar</a></li>
+        <li> <a href="#">Harga</a></li>
+        <li><a href="#">Beli</a></li>
+      </ul>
+    </nav>
+    <form id="search-input" style="display: none">
+      <input type="search" placeholder="Cari konten di sini..">
+    </form>
+  </header>

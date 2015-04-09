@@ -1,27 +1,49 @@
 @import "partials/normalize";
 @import "partials/global";
 @import "partials/layout";
+@import "partials/nav";
+@import "partials/footer";
 
-nav {
-  padding: $padding;
-  background: $primary-color;
-  ul, li, a {
-    display: inline-block;
-    @media (max-width: 480px) {
-      display: block;
+section {
+  margin-bottom: 10px
+}
+#hero {
+  position: relative;
+  height: 150px;
+  background: url('http://lorempixel.com/500/150'), $light-primary-color;
+  a {
+    background: $primary-color;
+    border-radius: 5px;
+    padding: $padding;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    &:hover {
+      background: $dark-primary-color;
     }
   }
-  ul {
-    float: right;
-    a {
-      padding: $padding;
-    }
+  p {
+    color: white;
+    text-shadow: $shadow;
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+    top: 25%;
+    left: 60%;
   }
 }
 
-#logo {
-  padding: $padding;
-  display: inline-block;
-  background: black;
-  color: white;
+#marketing-points {
+  section {
+    display: inline-block;
+    text-align: center;
+    h1 {
+      color: white;
+      background: $primary-color;
+      display: inline-block;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+  }
 }

@@ -1,6 +1,9 @@
+// Variables
 $font: Ubuntu, sans-serif;
 $padding: 5px 10px;
 $primary-color: #008EFF;
+$light-primary-color: lighten($primary-color, 15%);
+$dark-primary-color: darken($primary-color, 15%);
 $shadow: 0 1px 1px black;
 
 
@@ -8,8 +11,15 @@ html {
   background: #FAFAFA;
   font-family: $font;
 }
+
+img {
+    width: 100%;
+}
+
 a {
   color: white;
   text-decoration: none;
-  text-shadow: $shadow;
+  &:hover {
+    color: darken(white, 20%);
+  }
 }
