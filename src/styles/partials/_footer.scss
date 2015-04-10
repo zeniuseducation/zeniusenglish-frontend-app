@@ -2,9 +2,9 @@ footer {
   background: $primary-color;
   border-top: 5px solid $dark-primary-color;
   color: white;
-  padding: $padding;
+  padding: $padding-mobile;
   h4 {
-    padding: $padding;
+    padding: $padding-mobile;
     text-decoration: underline;
   }
   section {
@@ -16,6 +16,6 @@ footer {
     display: block;
   }
   a {
-    padding: $padding;
+    padding: $padding-mobile;
   }
 }

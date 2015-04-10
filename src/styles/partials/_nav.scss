@@ -6,17 +6,21 @@
 }
 header {
   text-align: center;
+  text-shadow: 0 1px grey, $shadow;
   color: white;
-  padding: $padding;
+  padding: $padding-mobile;
   background: $primary-color;
   border-bottom: 5px solid $dark-primary-color;
+  a {
+    color: white;
+  }
   form {
     margin-top: 10px;
     color: black;
     display: block;
     padding: padding;
     input {
-      padding: $padding;
+      padding: $padding-mobile;
       border-radius: 10px;
       width: 90%;
     }
@@ -30,7 +34,7 @@ header {
   h1 {
     display: inline-block;
     font-size: 1em;
-    padding: $padding;
+    padding: $padding-mobile;
   }
   nav {
     margin-top: 10px;
@@ -51,7 +55,7 @@ header {
         }
         a {
           display: block;
-          padding: $padding;
+          padding: $padding-mobile;
         }
       }
   }
