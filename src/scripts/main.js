@@ -23,20 +23,24 @@ function toggleSearch() {
 }
 
 function toggleInputFilter() {
-    searchDocInput.style.display = searchDocInput.style.display === 'none'? 'block' : 'none';
-    if(filterDocSelect.style.display === 'block') {
-        filterDocSelect.style.display = 'none';
-    }
+  searchDocInput.style.display = searchDocInput.style.display === 'none'? 'block' : 'none';
+  if(filterDocSelect.style.display === 'block') {
+    filterDocSelect.style.display = 'none';
+  }
 }
 
 function toggleSelectFilter() {
-    filterDocSelect.style.display = filterDocSelect.style.display === 'none'? 'block' : 'none';
-    if(searchDocInput.style.display === 'block') {
-        searchDocInput.style.display = 'none';
-    }
+  filterDocSelect.style.display = filterDocSelect.style.display === 'none'? 'block' : 'none';
+  if(searchDocInput.style.display === 'block') {
+    searchDocInput.style.display = 'none';
+  }
 }
 
 burger.addEventListener('click', toggleNav);
 search.addEventListener('click', toggleSearch);
 searchDoc[1].addEventListener('click', toggleInputFilter);
 filterDoc[0].addEventListener('click', toggleSelectFilter);
+
+window.onscroll = function() {
+  document.getElementById('back-top').style.display = window.pageYOffset >= 50? 'inline-block' : 'none';
+};
