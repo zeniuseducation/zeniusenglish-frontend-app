@@ -104,3 +104,14 @@
   background: lighten(grey, 20%);
   color: white;
 }
+#back-top {
+  background: grey;
+  color: white;
+  position: fixed;
+  top: 90%;
+  right: 10%;
+  a {
+    position: relative;
+    padding: 10px;
+  }
+}
