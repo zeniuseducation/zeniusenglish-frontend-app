@@ -6,7 +6,6 @@ var dropdownToggleElements = doc.querySelectorAll('[data-toggle="dropdown"]');
 // Show a target element when trigger element is clicked then hide targetHide element
 function dropdownToggle(trigger, targetShow, targetHide) {
   trigger.onclick = function() {
-    console.log('works');
     targetShow.style.display = targetShow.style.display === 'none'? 'block': 'none';
     if (targetHide.style.display === 'block') {
       targetHide.style.display = 'none';
