@@ -155,3 +155,75 @@
     }
   }
 }
+
+.module-item {
+  text-align: center;
+  margin-top: 5px;
+  border-bottom: 1px solid grey;
+  a {
+    display: block;
+    padding: 5px;
+  }
+}
+
+#prevNextNav {
+  span {
+    margin: 10px 5px 0;
+    a {
+      color: white;
+      display: inline-block;
+      padding: 5px;
+      background: grey;
+      border-radius: 5px;
+    }
+    &:first-child {
+      float: left;
+    }
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+#module-content {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  label {
+    display: inline-block;
+    width: 90%;
+    padding: 5px;
+  }
+  img {
+    vertical-align: top;
+  }
+  [type="submit"] {
+    margin-top: 5px;
+    padding: 5px;
+    float: right;
+    background: grey;
+    color: white;
+  }
+}
+
+#cheatSheet {
+  margin-top: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  h3 {
+    padding: 5px;
+    background: grey;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+#cheatSheetText {
+  padding: 5px;
+}
+
+.option {
+  border: 1px solid grey;
+  margin-top: 5px;
+  border-radius: 5px;
+}
