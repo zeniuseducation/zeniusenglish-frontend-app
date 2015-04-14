@@ -3,8 +3,8 @@
 })
 <section class="row">
   <section id="filter">
-    <button type="search">Search</button>
-    <button type="filter">Filter</button>
+    <button type="search" data-toggle="dropdown" data-target="#searchDoc" data-hide="#filterDoc">Search</button>
+    <button type="filter" data-toggle="dropdown" data-target="#filterDoc" data-hide="#searchDoc">Filter</button>
     <section class="row" id="searchDoc" style="display: none">
       <input type="search" placeholder="Cari dokumen di sini..">
     </section>
