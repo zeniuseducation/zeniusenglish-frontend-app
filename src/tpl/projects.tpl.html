@@ -1,0 +1,91 @@
+@@include('partials/_guest-head.html', {
+  "title": "zeniusEnglish | Projects"
+})
+
+<!-- Filter projects section -->
+<section class="row">
+  <section id="filter">
+    <button type="search" data-toggle="dropdown" data-target="#searchProjects" data-hide="#filterProjects">Search</button>
+    <button type="filter" data-toggle="dropdown" data-target="#filterProjects" data-hide="#searchProjects">Filter</button>
+    <section class="row" id="searchProjects" style="display: none">
+      <input type="search" placeholder="Cari project di sini..">
+    </section>
+    <section class="row" id="filterProjects" style="display:none">
+      <select>
+        <option value="" disabled selected>-- filter your projects --</option>
+        <option value="grammar">Grammar</option>
+        <option value="vocabulary">Vocabulary</option>
+        <option value="Use of English">Use of English</option>
+      </select>
+    </section>
+  </section>
+</section>
+
+<section class="row"><h1>Projects</h1></section>
+
+<!-- Projects list -->
+<section id="project-list" class="row">
+  <section class="project-item">
+    <h3 data-toggle="dropdown" data-target="#projectModule1"><a href="project.html">Project #1 Name</a></h3>
+    <section id="projectModule1" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <h3 data-toggle="dropdown" data-target="#projectModule2"><a href="project.html">Project #2 Name</a></h3>
+    <section id="projectModule2" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <h3 data-toggle="dropdown" data-target="#projectModule3"><a href="project.html">Project #3 Name</a></h3>
+    <section id="projectModule3" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <h3 data-toggle="dropdown" data-target="#projectModule4"><a href="project.html">Project #4 Name</a></h3>
+    <section id="projectModule4" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <h3 data-toggle="dropdown" data-target="#projectModule5"><a href="project.html">Project #5 Name</a></h3>
+    <section id="projectModule5" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <span id="load-list"><a href="#">Load More...</a></span>
+</section>
+
+@@include('partials/_guest-foot.html')
