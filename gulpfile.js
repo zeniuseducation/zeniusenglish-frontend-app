@@ -52,7 +52,7 @@ gulp.task('fileInclude', function() {
 
 // Lint JavaScript
 gulp.task('jshint', function () {
-  return gulp.src(path.join(paths.source, 'scripts/**/*.js'))
+  return gulp.src(path.join(paths.source, 'scripts/*.js'))
     .pipe(reload({stream: true, once: true}))
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'))
@@ -116,8 +116,8 @@ gulp.task('html', function () {
     .pipe(assets)
     // Concatenate and minify JavaScript
     .pipe(plugins.if('*.js', plugins.uglify({preserveComments: 'some'})))
-    // Output concatenated and minified scripts
-    // .pipe(plugins.if('*.js', gulp.dest(paths.distribution)))
+    // Output concatenated and minified scripts to .tmp
+    .pipe(plugins.if('*.js', gulp.dest('.tmp')))
     // Compress scripts
     // .pipe(plugins.if('*.js', plugins.gzip({threshold: true})))
     // Remove any unused CSS
@@ -159,7 +159,7 @@ gulp.task('serve', ['fileInclude', 'styles'], function () {
 
   gulp.watch([path.join(paths.templates, '**/*.tpl.html')], ['fileInclude', reload]);
   gulp.watch([path.join(paths.source, 'styles/**/*.scss')], ['styles', reload]);
-  gulp.watch([path.join(paths.source, 'scripts/**/*.js')], ['jshint']);
+  gulp.watch([path.join(paths.source, 'scripts/**/**/*.js')], ['jshint', 'html']);
   gulp.watch([path.join(paths.source, 'images/**/*')], reload);
 });
 
@@ -178,7 +178,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build production files, the default task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence(['fileInclude', 'styles'], ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence(['fileInclude', 'styles'], ['html'], ['jshint', 'images', 'fonts', 'copy'], cb);
 });
 
 // Run PageSpeed Insights

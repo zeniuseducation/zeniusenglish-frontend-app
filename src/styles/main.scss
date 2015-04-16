@@ -222,8 +222,37 @@
   padding: 5px;
 }
 
-.option {
-  border: 1px solid grey;
+#options {
+  div {
+    background: grey;
+    padding: 5px;
+    margin-top: 5px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background: lighten(grey, 20%);
+    }
+  }
+}
+
+#question-number {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#nextQuestion {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+  background: grey;
+  color: white;
+  cursor: pointer;
   margin-top: 5px;
   border-radius: 5px;
+  text-align: center;
+  &:hover {
+    background: lighten(grey, 20%);
+  }
 }

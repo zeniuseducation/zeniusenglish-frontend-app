@@ -28,4 +28,10 @@
   <img src="http://lorempixel.com/500/200">
 </section>
 
-@@include('partials/_guest-foot.html')
+@@include('partials/_guest-foot-start.html', {
+  "dest": "scripts/main-min.js"
+})
+@@include('partials/_script.html', {
+  "path": "scripts/main.js"
+})
+@@include('partials/_guest-foot-end.html')

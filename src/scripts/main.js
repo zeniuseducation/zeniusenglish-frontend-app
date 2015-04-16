@@ -1,6 +1,8 @@
 'use strict';
 
 var doc = window.document;
+var title = doc.getElementsByTagName('h1')[1];
+console.log(title);
 var dropdownToggleElements = doc.querySelectorAll('[data-toggle="dropdown"]');
 
 // Show a target element when trigger element is clicked then hide targetHide element
