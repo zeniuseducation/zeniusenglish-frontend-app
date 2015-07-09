@@ -28,46 +28,119 @@ footer {
 
 
 /*****************************
-General
+index.html
 *****************************/
 
+#marketing-points,
+#learning-guide {
+  margin-top: 1em;
+}
+
 #hero {
-  position: relative;
-  height: 150px;
-  background: url('http://lorempixel.com/500/150'), $light-primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25vh;
+  text-align: center;
+  @media #{$media-tablet} {
+    justify-content: center;
+    flex-flow: column nowrap;
+    height: 40vh;
+  }
+  background: url('http://lorempixel.com/1000/300'), $light-primary-color;
   a {
+    @media #{$media-tablet} {
+      order: 2;
+    }
     background: $primary-color;
-    border-radius: $radius;
+    border-radius: $button-radius;
     padding: $padding-mobile;
-    position: absolute;
-    top: 45%;
-    left: 10%;
     &:hover {
       background: $dark-primary-color;
     }
   }
   p {
+    @media #{$media-tablet} {
+      order: 1
+    }
     color: white;
     text-shadow: $shadow;
-    display: inline-block;
     width: 30%;
-    position: absolute;
-    top: 25%;
-    left: 60%;
+    margin: 0;
   }
 }
 
 #marketing-points {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-between;
   section {
-    display: inline-block;
+    @media #{$media-desktop} {
+      flex: 1 0 0;
+    }
+    flex: 1 0 40%;
     text-align: center;
+    padding: 5px;
     h1 {
       color: white;
       background: $primary-color;
       display: inline-block;
+      padding: 20px;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
+    }
+  }
+}
+
+#follow-us {
+  display: flex;
+  background: grey;
+  padding: 5px;
+  justify-content: center;
+  a {
+    padding: 5px;
+    margin: 0 10px;
+    background: white;
+  }
+}
+
+#cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  p {
+    margin: 0 10px;
+  }
+  a {
+    background: $primary-color;
+    border-radius: $button-radius;
+    font: 1.5em $font;
+    padding: 10px;
+  }
+}
+
+#as-seen {
+  margin: 10px 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  font: 1.125em $font;
+  text-align: center;
+  p {
+    flex: 1 100%;
+    @media #{$media-tablet} {
+      flex: 0 1 auto;
+    }
+  }
+  a {
+    background: grey;
+    border-radius: $button-radius;
+    padding: 30px;
+    flex: 0 1 25%;
+    @media #{$media-tablet} {
+      flex: 0 1 auto;
     }
   }
 }
