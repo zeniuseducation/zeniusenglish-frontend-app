@@ -1,29 +1,98 @@
+/*****************************
+Navigations
+*****************************/
+
 #burger {
   float: right;
+  order: 3;
+  @media #{$media-desktop} {
+    display: none;
+  }
 }
+
 #search-btn {
-  float: left;
+  order: 1;
+  @media #{$media-desktop} {
+    display: none;
+  }
 }
+
+#menu,
+#search {
+  @media #{$media-desktop} {
+    margin: 0;
+  }
+  order: 4;
+  flex: 1 100%;
+  margin: 10px 0 0;
+}
+
+#menu {
+  @media #{$media-desktop} {
+    display: inline-block !important;
+    order: 5;
+    flex: 4 0 0;
+  }
+  ul, ol {
+    @media #{$media-desktop} {
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+    }
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    @media #{$media-desktop} {
+      background: inherit;
+      box-shadow: inherit;
+      border-radius: inherit !important;
+    }
+    background: $light-primary-color;
+    box-shadow: 0 1px 3px $dark-primary-color;
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+    &:hover {
+      background: $dark-primary-color;
+    }
+    a {
+      display: block;
+      padding: $padding-mobile;
+    }
+  }
+}
+
+#search {
+  @media #{$media-desktop} {
+    display: inline-block !important;
+    flex: 3 0 0;
+  }
+  color: black;
+  input {
+    padding: $padding-mobile;
+    border-radius: 10px;
+    width: 90%;
+  }
+}
+
 header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: flex-start;
   text-align: center;
   text-shadow: 0 1px grey, $shadow;
-  color: white;
   padding: $padding-mobile;
   background: $primary-color;
   border-bottom: 5px solid $dark-primary-color;
   a {
     color: white;
-  }
-  form {
-    margin-top: 10px;
-    color: black;
-    display: block;
-    padding: padding;
-    input {
-      padding: $padding-mobile;
-      border-radius: 10px;
-      width: 90%;
-    }
   }
   button {
     background: grey;
@@ -32,32 +101,9 @@ header {
     height: 30px;
   }
   h1 {
+    order: 2;
     display: inline-block;
     font-size: 1em;
     padding: $padding-mobile;
-  }
-  nav {
-    margin-top: 10px;
-      ul, ol {
-        padding: 0;
-        list-style: none;
-      }
-      li {
-        background: $light-primary-color;
-        box-shadow: 0 1px 3px $dark-primary-color;
-        &:first-child {
-          border-radius: 5px 5px 0 0;
-        }
-        &:last-child {
-          border-radius: 0 0 5px 5px;
-        }
-        &:hover {
-          background: $dark-primary-color;
-        }
-        a {
-          display: block;
-          padding: $padding-mobile;
-        }
-      }
   }
 }

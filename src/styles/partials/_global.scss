@@ -1,10 +1,13 @@
 // Variables
 $font: Ubuntu, sans-serif;
 $padding-mobile: 5px 10px;
+$radius: 5px;
 $primary-color: #008EFF;
 $light-primary-color: lighten($primary-color, 15%);
 $dark-primary-color: darken($primary-color, 15%);
 $shadow: 0 1px black;
+$media-tablet: "all and (min-width: 768px)";
+$media-desktop: "all and (min-width: 1224px)";
 
 
 html {
@@ -24,11 +27,6 @@ iframe {
 
 p {
   margin-top: 1em;
-}
-
-ul, ol {
-  margin-top: 1em;
-  padding: 0 0 0 20px;
 }
 
 a {

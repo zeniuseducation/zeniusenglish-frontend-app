@@ -1,8 +1,34 @@
 @import "partials/normalize";
 @import "partials/global";
-@import "partials/layout";
 @import "partials/nav";
 @import "partials/footer";
+
+/*****************************
+Layout
+*****************************/
+
+div, section, nav, header, footer {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header,
+main,
+article,
+aside,
+footer {
+  flex: 1 100%;
+}
+
+
+
+/*****************************
+General
+*****************************/
 
 #hero {
   position: relative;
@@ -10,7 +36,7 @@
   background: url('http://lorempixel.com/500/150'), $light-primary-color;
   a {
     background: $primary-color;
-    border-radius: 5px;
+    border-radius: $radius;
     padding: $padding-mobile;
     position: absolute;
     top: 45%;
