@@ -1,4 +1,8 @@
 footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-between;
   background: $primary-color;
   border-top: 5px solid $dark-primary-color;
   color: white;
@@ -7,15 +11,49 @@ footer {
     padding: $padding-mobile;
     text-decoration: underline;
   }
-  section {
-    float: left;
-    width: 50%;
-    text-align: center;
-  }
   ul, li, a {
     display: block;
   }
   a {
     padding: $padding-mobile;
+  }
+}
+
+#site-map,
+#social-media {
+  text-align: center;
+}
+
+#social-media,
+#address {
+  @media #{$media-tablet} {
+    flex: 1 0 0;
+  }
+  flex: 1 0 50%;
+}
+
+#site-map {
+  @media #{$media-tablet} {
+    flex: 2 0 0;
+  }
+  display: flex;
+  flex: 1 100%;
+  section {
+    flex: 1 50%;
+  }
+}
+
+#social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    display: flex;
+    li {
+      padding: 5px;
+      margin: 0 5px;
+      background: grey;
+      border-radius: 50%;
+    }
   }
 }

@@ -14,6 +14,7 @@ div, section, nav, header, footer {
 .wrapper {
   display: flex;
   flex-flow: row wrap;
+  min-height: 100vh;
 }
 
 header,
