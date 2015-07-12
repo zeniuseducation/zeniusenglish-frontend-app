@@ -27,6 +27,7 @@ footer {
 
 main {
   flex: 1;
+  padding: $padding-mobile;
 }
 header, footer {
   flex: none;
@@ -152,46 +153,90 @@ index.html
   }
 }
 
-#filter {
-  border: 1px solid grey;
-  border-radius: 10px 10px 0 0;
-  button {
+
+
+/*****************************
+Documentation List Page
+*****************************/
+
+.breadcrumb {
+  background: grey;
+  border-radius: $button-radius;
+  padding: $padding-mobile;
+  color: white;
+  li {
     display: inline-block;
-    float: left;
-    width: 50%;
+    &:after {
+      content: "/";
+      margin: 0 5px;
+    }
+  }
+}
+.title {
+  border-bottom: 1px solid black;
+  text-align: right;
+  @media #{$media-tablet} {
+    margin: 20px auto;
+  }
+}
+.filter {
+  border: 1px grey solid;
+  display: block;
+  width: 100%;
+  font-size: 1.125em;
+  @media #{$media-tablet} {
+    display: none;
+  }
+}
+#doc-interface {
+  @media #{$media-tablet} {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+aside {
+  display: none;
+  @media #{$media-tablet} {
+    display: inline-block;
+    flex: 0 1 25%;
+  }
+  li {
     background: grey;
     color: white;
-    padding: $padding-mobile;
-  }
-  button[type="search"] {
-    border-radius: 10px 0 0 0;
-  }
-  button[type="filter"] {
-    border-radius: 0 10px 0 0;
-  }
-  select {
-    margin: 10px 0;
-    display: block;
-    width: 100%;
-    height: 1.5em;
-  }
-  input {
-    margin: 10px 0;
-    display: block;
-    width: 100%;
-    height: 1.5em;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    &.second-class {
+      padding-left: 20px;
+    }
+    &:hover {
+      background: lighten(grey, 10%);
+    }
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+    }
   }
 }
 #document-list {
-  text-align: center;
+  @media #{$media-tablet} {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 75%;
+  }
 }
 .document-item {
-  margin: 5px;
-  text-align: left;
-  padding-bottom: 5px;
+  padding: 5px;
   border-bottom: 1px solid black;
   a:hover {
     color: grey;
+  }
+  @media #{$media-tablet} {
+    flex: 0 1 30%;
+    border: 1px solid black;
+    border-radius: $button-radius;
+    margin: 0 0 10px 3.3333%;
   }
 }
 
@@ -203,20 +248,18 @@ index.html
   margin: 2px;
   padding: 2px 5px;
 }
-#load-list {
-  display: inline-block;
-  margin: auto;
-  padding: 2px 5px;
-  border-radius: 5px;
-  background: lighten(grey, 20%);
-  color: white;
-}
 #back-top {
-  background: grey;
-  color: white;
   position: fixed;
-  top: 90%;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #f00;
+  bottom: 10%;
   right: 10%;
+  @media #{$media-tablet} {
+    display: none;
+  }
   a {
     position: relative;
     padding: 10px;
