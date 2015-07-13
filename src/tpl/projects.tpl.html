@@ -3,30 +3,38 @@
 })
 
 <!-- Filter projects section -->
-<section class="row">
-  <section id="filter">
-    <button type="search" data-toggle="dropdown" data-target="#searchProjects" data-hide="#filterProjects">Search</button>
-    <button type="filter" data-toggle="dropdown" data-target="#filterProjects" data-hide="#searchProjects">Filter</button>
-    <section class="row" id="searchProjects" style="display: none">
-      <input type="search" placeholder="Cari project di sini..">
-    </section>
-    <section class="row" id="filterProjects" style="display:none">
-      <select>
-        <option value="" disabled selected>-- filter your projects --</option>
-        <option value="grammar">Grammar</option>
-        <option value="vocabulary">Vocabulary</option>
-        <option value="Use of English">Use of English</option>
-      </select>
-    </section>
-  </section>
-</section>
+<main>
+<ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li>Project</li>
+  </ul>
+<h1 class="title">Projects</h1>
+<select class="filter">
+  <option value="" disabled selected>-- filter your projects --</option>
+  <option value="grammar">Grammar</option>
+  <option value="vocabulary">Vocabulary</option>
+  <option value="Use of English">Use of English</option>
+</select>
 
-<section class="row"><h1>Projects</h1></section>
+<aside class="side-nav">
+  <ul>
+    <li>Grammar</li>
+    <li>Vocabulary</li>
+    <li>Use of English</li>
+  </ul>
+</aside>
 
 <!-- Projects list -->
-<section id="project-list" class="row">
+<section id="project-list">
   <section class="project-item">
-    <h3 data-toggle="dropdown" data-target="#projectModule1"><a href="project.html">Project #1 Name</a></h3>
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #1 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule1">B</button>
+    </section>
     <section id="projectModule1" class="projectModule" style="display: none">
       <ul>
         <li><a href="project-module.html">Module 1</a></li>
@@ -38,7 +46,14 @@
     </section>
   </section>
   <section class="project-item">
-    <h3 data-toggle="dropdown" data-target="#projectModule2"><a href="project.html">Project #2 Name</a></h3>
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #2 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule2">B</button>
+    </section>
     <section id="projectModule2" class="projectModule" style="display: none">
       <ul>
         <li><a href="project-module.html">Module 1</a></li>
@@ -50,7 +65,14 @@
     </section>
   </section>
   <section class="project-item">
-    <h3 data-toggle="dropdown" data-target="#projectModule3"><a href="project.html">Project #3 Name</a></h3>
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #3 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule3">B</button>
+    </section>
     <section id="projectModule3" class="projectModule" style="display: none">
       <ul>
         <li><a href="project-module.html">Module 1</a></li>
@@ -62,7 +84,14 @@
     </section>
   </section>
   <section class="project-item">
-    <h3 data-toggle="dropdown" data-target="#projectModule4"><a href="project.html">Project #4 Name</a></h3>
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #4 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule4">B</button>
+    </section>
     <section id="projectModule4" class="projectModule" style="display: none">
       <ul>
         <li><a href="project-module.html">Module 1</a></li>
@@ -74,7 +103,14 @@
     </section>
   </section>
   <section class="project-item">
-    <h3 data-toggle="dropdown" data-target="#projectModule5"><a href="project.html">Project #5 Name</a></h3>
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #5 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule5">B</button>
+    </section>
     <section id="projectModule5" class="projectModule" style="display: none">
       <ul>
         <li><a href="project-module.html">Module 1</a></li>
@@ -85,8 +121,104 @@
       </ul>
     </section>
   </section>
-  <span id="load-list"><a href="#">Load More...</a></span>
+  <section class="project-item">
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #6 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule6">B</button>
+    </section>
+    <section id="projectModule6" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #7 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule7">B</button>
+    </section>
+    <section id="projectModule7" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #8 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule8">B</button>
+    </section>
+    <section id="projectModule8" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #9 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule9">B</button>
+    </section>
+    <section id="projectModule9" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+  <section class="project-item">
+    <section class="project-header">
+      <div class="project-logo">L</div>
+      <section class="project-info">
+        <h2><a href="project.html">Project #10 Name</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+      <button data-toggle="dropdown" data-target="#projectModule10">B</button>
+    </section>
+    <section id="projectModule10" class="projectModule" style="display: none">
+      <ul>
+        <li><a href="project-module.html">Module 1</a></li>
+        <li><a href="project-module.html">Module 2</a></li>
+        <li><a href="project-module.html">Module 3</a></li>
+        <li><a href="project-module.html">Module 4</a></li>
+        <li><a href="project-module.html">Module 5</a></li>
+      </ul>
+    </section>
+  </section>
+
 </section>
+</main>
 
 @@include('partials/_guest-foot-start.html', {
   "dest": "scripts/main-min.js"

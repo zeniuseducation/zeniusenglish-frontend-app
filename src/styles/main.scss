@@ -28,6 +28,7 @@ footer {
 main {
   display: flex;
   flex-flow: row wrap;
+  align-content: space-between;
   flex: 1;
   padding: $padding-mobile;
 }
@@ -329,20 +330,33 @@ article {
   }
 }
 
+
+
+/*****************************
+Projects
+*****************************/
 #project-list {
-  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 100%;
+  @media #{$media-tablet} {
+    flex: 0 1 75%;
+    padding: 0 10px;
+  }
 }
 
 .project-item {
-  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
   margin-bottom: 10px;
   border: 1px solid black;
   color: white;
   border-radius: 5px;
-  cursor: pointer;
-  h3 {
+  background: lighten(grey, 20%);
+  padding: 5px;
+  button {
     background: grey;
-    padding: 5px;
+    padding: $padding-mobile;
   }
   a {
     color: white;
@@ -351,7 +365,39 @@ article {
     }
   }
 }
+
+.project-header {
+  display: flex;
+  flex: 0 1 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-info {
+  display: flex;
+  flex-flow: column;
+  p {
+    display: none;
+    @media #{$media-tablet} {
+      display: block;
+      margin-top: 0;
+    }
+  }
+}
+
+.project-logo {
+  display: none;
+  @media #{$media-tablet} {
+    display: inline-block;
+    background: white;
+    border: 1px solid black;
+    padding: 20px;
+    color: black;
+  }
+}
+
 .projectModule {
+  flex: 0 1 100%;
   a {
     display: block;
     padding: 5px;
