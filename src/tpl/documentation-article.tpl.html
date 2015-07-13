@@ -2,11 +2,52 @@
   "title": "zeniusEnglish | Article Title"
 })
 
-<section class="row">
-  <h1></h1>
-</section>
-<section class="row" id="docContent"></section>
-<div id="back-top" style="display: none"><a href="#">^</a></div>
+<main>
+  <ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="documentation.html">Documentation</a></li>
+    <li>Document Title</li>
+  </ul>
+  <section class="flex">
+    <article>
+      <h1></h1>
+      <section id="docContent"></section>
+    </article>
+    <aside class="suggestion">
+      <section class="prev-next">
+        <button>Previous Document</button>
+        <button>Next Document</button>
+      </section>
+      <section class="more-docs">
+        <h3>Grammar: Tenses</h3>
+        <ul>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+          <li><a href="documentation-article.html">Document Title</a></li>
+        </ul>
+      </section>
+      <section class="project-suggestion">
+        <h3>Project Suggestions</h3>
+        <ul>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+          <li><a href="project.html">Project Title</a></li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+  <a href="#" id="back-top"></a>
+</main>
 
 @@include('partials/_guest-foot-start.html', {
   "dest": "scripts/document.js"

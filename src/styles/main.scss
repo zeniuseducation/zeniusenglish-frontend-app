@@ -17,6 +17,10 @@ div, section, nav, header, footer {
   min-height: 100vh;
 }
 
+.flex {
+  display: flex;
+}
+
 header,
 main,
 article,
@@ -84,7 +88,7 @@ index.html
   justify-content: space-around;
   align-content: space-between;
   section {
-    @media #{$media-desktop} {
+    @media #{$media-tablet} {
       flex: 1 0 0;
     }
     flex: 1 0 40%;
@@ -164,6 +168,7 @@ Documentation List Page
   border-radius: $button-radius;
   padding: $padding-mobile;
   color: white;
+  margin-bottom: 10px;
   li {
     display: inline-block;
     &:after {
@@ -176,7 +181,7 @@ Documentation List Page
   border-bottom: 1px solid black;
   text-align: right;
   @media #{$media-tablet} {
-    margin: 20px auto;
+    margin-bottom: 20px;
   }
 }
 .filter {
@@ -194,28 +199,28 @@ Documentation List Page
     align-items: flex-start;
   }
 }
-aside {
+.side-nav {
   display: none;
   @media #{$media-tablet} {
     display: inline-block;
     flex: 0 1 25%;
-  }
-  li {
-    background: grey;
-    color: white;
-    padding: 5px;
-    border-bottom: 1px solid black;
-    &.second-class {
-      padding-left: 20px;
-    }
-    &:hover {
-      background: lighten(grey, 10%);
-    }
-    &:first-child {
-      border-radius: 5px 5px 0 0;
-    }
-    &:last-child {
-      border-radius: 0 0 5px 5px;
+    li {
+      background: grey;
+      color: white;
+      padding: 5px;
+      border-bottom: 1px solid black;
+      &.second-class {
+        padding-left: 20px;
+      }
+      &:hover {
+        background: lighten(grey, 10%);
+      }
+      &:first-child {
+        border-radius: 5px 5px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+      }
     }
   }
 }
@@ -248,6 +253,54 @@ aside {
   margin: 2px;
   padding: 2px 5px;
 }
+
+
+
+/*****************************
+Documentation Article Page
+*****************************/
+
+article {
+  @media #{$media-tablet} {
+    flex: 0 1 50%;
+  }
+  h1 {
+    font: 2em $font;
+  }
+}
+
+.suggestion {
+  @media #{$media-tablet} {
+    flex: 0 1 50%;
+  }
+}
+
+.prev-next {
+  display: flex;
+  justify-content: center;
+  button {
+    background: grey;
+    color: white;
+    padding: $padding-mobile;
+  }
+}
+
+.more-docs,
+.project-suggestion {
+  margin-top: 10px;
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+  a {
+    border: 1px solid black;
+    border-radius: $button-radius;
+    display: inline-block;
+    padding: $padding-mobile;
+    margin-top: 10px;
+  }
+}
+
 #back-top {
   position: fixed;
   width: 0;
