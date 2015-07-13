@@ -17,10 +17,6 @@ div, section, nav, header, footer {
   min-height: 100vh;
 }
 
-.flex {
-  display: flex;
-}
-
 header,
 main,
 article,
@@ -30,6 +26,8 @@ footer {
 }
 
 main {
+  display: flex;
+  flex-flow: row wrap;
   flex: 1;
   padding: $padding-mobile;
 }
@@ -42,6 +40,15 @@ header, footer {
 /*****************************
 index.html
 *****************************/
+
+#hero,
+#follow-us,
+#marketing-points,
+#cta,
+#learning-guide,
+#as-seen {
+  flex: 0 1 100%;
+}
 
 #marketing-points,
 #learning-guide {
@@ -164,6 +171,7 @@ Documentation List Page
 *****************************/
 
 .breadcrumb {
+  flex: 0 1 100%;
   background: grey;
   border-radius: $button-radius;
   padding: $padding-mobile;
@@ -178,6 +186,7 @@ Documentation List Page
   }
 }
 .title {
+  flex: 0 1 100%;
   border-bottom: 1px solid black;
   text-align: right;
   @media #{$media-tablet} {
@@ -191,12 +200,6 @@ Documentation List Page
   font-size: 1.125em;
   @media #{$media-tablet} {
     display: none;
-  }
-}
-#doc-interface {
-  @media #{$media-tablet} {
-    display: flex;
-    align-items: flex-start;
   }
 }
 .side-nav {
@@ -261,6 +264,7 @@ Documentation Article Page
 *****************************/
 
 article {
+  flex: 0 1 100%;
   @media #{$media-tablet} {
     flex: 0 1 50%;
   }
@@ -270,7 +274,9 @@ article {
 }
 
 .suggestion {
+  flex: 0 1 100%;
   @media #{$media-tablet} {
+    display: block;
     flex: 0 1 50%;
   }
 }
@@ -287,17 +293,21 @@ article {
 
 .more-docs,
 .project-suggestion {
-  margin-top: 10px;
-  text-align: center;
-  ul {
-    list-style: none;
-  }
-  a {
-    border: 1px solid black;
-    border-radius: $button-radius;
-    display: inline-block;
-    padding: $padding-mobile;
+  display: none;
+  @media #{$media-tablet} {
+    display: block;
     margin-top: 10px;
+    text-align: center;
+    ul {
+      list-style: none;
+    }
+    a {
+      border: 1px solid black;
+      border-radius: $button-radius;
+      display: inline-block;
+      padding: $padding-mobile;
+      margin-top: 10px;
+    }
   }
 }
 
