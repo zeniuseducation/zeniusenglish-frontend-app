@@ -189,9 +189,10 @@ Documentation List Page
 .title {
   flex: 0 1 100%;
   border-bottom: 1px solid black;
-  text-align: right;
+  text-align: center;
   @media #{$media-tablet} {
     margin-bottom: 20px;
+    text-align: right;
   }
 }
 .filter {
