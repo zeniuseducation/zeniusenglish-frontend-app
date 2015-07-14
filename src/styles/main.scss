@@ -229,6 +229,7 @@ Documentation List Page
   }
 }
 #document-list {
+  flex: 0 1 100%;
   @media #{$media-tablet} {
     display: flex;
     flex-flow: row wrap;
