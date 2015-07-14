@@ -286,11 +286,19 @@ article {
 
 .prev-next {
   display: flex;
+  flex: 0 1 100%;
   justify-content: center;
-  button {
+  a {
     background: grey;
     color: white;
     padding: $padding-mobile;
+    border: 1px solid black;
+    &:first-child {
+      border-radius: $button-radius 0 0 $button-radius;
+    }
+    &:last-child {
+      border-radius: 0 $button-radius $button-radius 0;
+    }
   }
 }
 
@@ -417,32 +425,47 @@ Projects
   }
 }
 
+
+
+/*****************************
+Project Page
+*****************************/
+
+#module-list {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 100%;
+  @media #{$media-tablet} {
+    flex-flow: row wrap;
+    flex: 0 1 75%;
+  }
+}
+
 .module-item {
   text-align: center;
   margin-top: 5px;
   border-bottom: 1px solid grey;
+  @media #{$media-tablet} {
+    flex: 0 1 20%;
+    border: 1px solid black;
+    border-radius: $button-radius;
+    justify-content: space-between;
+  }
   a {
-    display: block;
-    padding: 5px;
+    display: inline-block;
+    padding: 10px;
   }
 }
 
-#prevNextNav {
-  span {
-    margin: 10px 5px 0;
-    a {
-      color: white;
-      display: inline-block;
-      padding: 5px;
-      background: grey;
-      border-radius: 5px;
-    }
-    &:first-child {
-      float: left;
-    }
-    &:last-child {
-      float: right;
-    }
+#project-cta {
+  display: flex;
+}
+
+.project-nav {
+  display: none;
+  @media #{$media-tablet} {
+    display: block;
+    flex: 0 1 25%;
   }
 }
 
